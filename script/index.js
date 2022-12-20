@@ -29,41 +29,71 @@ selectWorks = () =>{
   artTitle = document.getElementById('title')
   refNo = document.getElementById('main_reference_number')
   date = document.getElementById('date_display')
-  artist = document.getElementById('artist_display'); 
+  artist = document.getElementById('artist_display')
+  work = document.querySelectorAll('a.list-group-item'); 
 
 };
 selectWorks();
 
 
-//Creating functions to open and suspend the sidebar on the right
-
-// fetch('')
-// .then(res=>(res.json()))
-// .then(data=>{
-//  let i = -1
-//  do{
-//   i+=1
-//   data2= data.films[i]
-//   // print (side[i])
-//   side[i].textContent = data2.title
-// //  print(data2.title)
-//  }while(i<14)   
-// //  print (side[0].textContent)
-//   })
 
 
   // side bar navigation menu displayer
 openNav.addEventListener("click", 
 function openNav() {
     document.getElementById("mainNav").style.width = "350px";
-    document.querySelector('div.header').style.marginRight = "350px";
+    //document.querySelector('div.container-fluid text bg-dark').style.marginRight = "350px";
     document.querySelector('div.main-container').style.marginRight = "350px";
     // print( document.getElementById("mySidenav"))
   });
   document.getElementById("closeNav").addEventListener("click", 
   function closeNav() {
     document.getElementById("mainNav").style.width = "0";
-    document.querySelector('div.header').style.marginLeft = "0";
+    //document.querySelector('div.container-fluid text bg-dark').style.marginLeft = "0";
     document.querySelector('div.main-container').style.marginLeft = "0";
   });
 
+
+
+
+  
+
+
+
+
+
+
+
+//Creating functions to open and suspend the sidebar on the right
+
+// fetch('https://api.npoint.io/fb6348ea0f63624394bb/data/')
+// .then(response => (response.json()))
+// .then(data=>{
+
+//  for (i= 1; i<11; i+=1) {
+//     otherData = data.data[i]
+
+//     //console.log(otherData);
+
+//     work[i].textContent = otherData.title;
+//     console.log(work[i].textContent);
+//  }
+//  })
+// /
+
+// const moreArtwork = document.querySelectorAll('a.list-group-item');
+// work.forEach (work => {
+//   work.addEventListener('click', (e) => {
+//     e.preventDefault()
+//     fetch('https://api.npoint.io/fb6348ea0f63624394bb/data/')
+//     .then(response => (response.json()))
+//       .then(data=> {
+//         moreData = data.data
+//         let i = Array.prototype.indexOf.call(work.parentNode.children, work);
+//         image.src = moreData[i].image_url 
+//         artTitle.textContent = moreData[i].title
+//         refNo.textContent = `MAIN REF. NO :   ${moreData[0].main_reference_number}`
+//         date.textContent = `Date of Display :   ${moreData[0].date_display}`
+//         artist.textContent = `Artist :  ${moreData[0].artist_display}`
+
+//       })})})
