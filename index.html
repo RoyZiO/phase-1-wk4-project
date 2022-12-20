@@ -1,20 +1,86 @@
 <!--CODE GOES HERE-->
 
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/main.css">
     <title>TYCHO ART STORE</title>
+    <link rel="stylesheet" href="./style/bootstrap.css">
+    <link rel="stylesheet" href="./style/main.css">
 </head>
 <body>
-    <img src=" " width="" height="" alt="logo" class="logo">
-    <header>
-        <form  id="form">
-            <input type="text" placeholder="Search" id="search" class="search">
-        </form>
-    </header>
+    <nav class = "navbar bg-dark">
+        <div class = "container-fluid text bg-dark"> 
+            <a class = "navbar-brand text-light" >TYCHO ART STORE</a>
+            <form class = "d-flex" role="search">
+                <input class = "form control" type = "text" placeholder = "Explore TYCHO" id = "search"/>
+                <button class = "btn btn-outline-info ms-5" id = "searchBtn">SEARCH</button>
+            </form>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle btn-success" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  MORE
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">About</a></li>
+                  <li><a class="dropdown-item" href="#">Favorites</a></li>
+                  <li><a class="dropdown-item" href="#">Contacts</a></li>
+                </ul>
+              </div>
+    </nav>
+    <div class="main-container" id="main-content">
+        <div class="card w-50" id="first painiting">
+            <div class="card" style="width: 60rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Title of Painting</h5>
+                  <p class="card-text">MAIN REF. NO:</p>
+                  <p class="card-text">Date of Display:</p>
+                  <p class="card-text">Artist:</p>
+                  <a href="#" class="btn btn-primary">Add to Favorites</a>
+                  <button type="button" class="btn btn-danger btn-sm">Remove from View</button>
+            </div>
+                <div class="card w-50" id="first painiting">
+                    <div class="card" style="width: 60rem;">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Title of Painting</h5>
+                          <p class="card-text">MAIN REF. NO:</p>
+                          <p class="card-text">Date of Display:</p>
+                          <p class="card-text">Artist:</p>
+                          <a href="#" class="btn btn-primary">Add to Favorites</a>
+                          <button type="button" class="btn btn-danger btn-sm">Remove from View</button>
+                </div>
+                <div class=”Cart-Container”></div>
+        </div>
+       
+        <div id="mySidenav" class="sidenav">
+            <a href="#" class="painting"></a>
+            <a href="#" class="painting"></a>
+            <a href="" class="painting"></a>
+            <a href="" class="painting"></a>
+            <a href="" class="painting"></a>
+            <a href="" class="painting"></a>
+            <a href="" class="painting"></a>
+            <a href="" class="painting"></a>
+            <a href="" class="painting"></a>
+            <a href="" class="painting"></a>
+            <button id="closeNav" class="closebtn btn btn-danger bt-sm" >CLOSE</button>
+          </div>         
+
+          </div>
+        
+    </div>
+
+
+
+
+
+
+
+    <script src="./script/index.js"></script>
+    <script src="./script/bootstrap.js"></script>
 
 </body>
 </html>
