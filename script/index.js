@@ -89,12 +89,10 @@ function openNav() {
 
                 console.log(data[i].title);
                 //console.log(data[title]);
-            //  work[i].textContent = data[i].title;
-            //  return work[i].textContent;
-
-               
-            }
-            selectWorks(work);
+            work[i].textContent = data[i].title;
+          
+            }  
+            return work[i].textContent;
            
   })
   
