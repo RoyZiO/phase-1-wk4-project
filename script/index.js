@@ -85,10 +85,10 @@ function openNav() {
     //     //console.log(work[i].textContent)
     //   }
 
-            for(let key in data) {
+            for(i=0; i < data.length; i++) {
 
-                console.log(key);
-                console.log(data[key]);
+                console.log(data[i].title);
+                //console.log(data[title]);
             //  work[i].textContent = data[i].title;
             //  return work[i].textContent;
 
