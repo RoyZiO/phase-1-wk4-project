@@ -35,3 +35,35 @@ selectWorks = () =>{
 selectWorks();
 
 
+//Creating functions to open and suspend the sidebar on the right
+
+// fetch('')
+// .then(res=>(res.json()))
+// .then(data=>{
+//  let i = -1
+//  do{
+//   i+=1
+//   data2= data.films[i]
+//   // print (side[i])
+//   side[i].textContent = data2.title
+// //  print(data2.title)
+//  }while(i<14)   
+// //  print (side[0].textContent)
+//   })
+
+
+  // side bar navigation menu displayer
+openNav.addEventListener("click", 
+function openNav() {
+    document.getElementById("mainNav").style.width = "350px";
+    document.querySelector('div.header').style.marginRight = "350px";
+    document.querySelector('div.main-container').style.marginRight = "350px";
+    // print( document.getElementById("mySidenav"))
+  });
+  document.getElementById("closeNav").addEventListener("click", 
+  function closeNav() {
+    document.getElementById("mainNav").style.width = "0";
+    document.querySelector('div.header').style.marginLeft = "0";
+    document.querySelector('div.main-container').style.marginLeft = "0";
+  });
+
