@@ -69,21 +69,7 @@ function openNav() {
   fetch('https://api.npoint.io/fb6348ea0f63624394bb/data/')
   .then(response => (response.json()))
   .then( function(data) {
-      //console.log(data);
 
-    //   let i = 7;
-
-    //   while (i < 11) {
-    //     //console.log(data);
-    //     i++;
-    //     //otherData.textContent = data.data[i];
-
-    //     work[i].textContent = data[i].title
-
-    //     return work[i].textContent
-
-    //     //console.log(work[i].textContent)
-    //   }
 
             for(i=0; i < data.length; i++) {
 
@@ -92,10 +78,9 @@ function openNav() {
             work[i].textContent = data[i].title;
           
             }  
-            return work[i].textContent;
+            return work[i];
            
   })
-  
 
       }
   appendArtworks();    
