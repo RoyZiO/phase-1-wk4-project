@@ -1,5 +1,4 @@
 //CODE GOES HERE
-
 document.addEventListener('DOMContentLoaded', ()=>{
   selectWorks()
   
@@ -72,22 +71,31 @@ function openNav() {
   .then( function(data) {
       //console.log(data);
 
+    //   let i = 7;
 
-      let i = -1
+    //   while (i < 11) {
+    //     //console.log(data);
+    //     i++;
+    //     //otherData.textContent = data.data[i];
 
-      while (i < 11) {
-        //console.log(data);
-        i++;
-        //otherData.textContent = data.data[i];
+    //     work[i].textContent = data[i].title
 
-        work[i].textContent = data[i].title
+    //     return work[i].textContent
 
-        return work[i].textContent
+    //     //console.log(work[i].textContent)
+    //   }
 
-        //console.log(work[i].textContent)
-      }
+            for(let key in data) {
 
+                console.log(key);
+                console.log(data[key]);
+            //  work[i].textContent = data[i].title;
+            //  return work[i].textContent;
 
+               
+            }
+            selectWorks(work);
+           
   })
   
 
