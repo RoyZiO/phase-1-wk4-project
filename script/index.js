@@ -3,13 +3,13 @@
 document.addEventListener('DOMContentLoaded', ()=>{
   selectWorks()
   
-  fetch('https://api.npoint.io/71eeb4c6accc790e272b/data/')
+  fetch('https://api.npoint.io/fb6348ea0f63624394bb/data/')
   .then(response=>(response.json()))
   .then(data=> {
     console.log(data)
    
-    //image.src = data[0].poster 
-    title.textContent = data[0].title
+    image.src = data[0].image_url 
+    artTitle.textContent = data[0].title
    // description.textContent = data[0].description
     refNo.textContent = `MAIN REF. NO :   ${data[0].main_reference_number}`
     date.textContent = `Date of Display :   ${data[0].date_display}`
@@ -25,8 +25,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
 selectWorks = () =>{
   dropDwn = document.getElementById("dropbtn")
-  image = document.getElementById('image_id')
-  title = document.getElementById('title')
+  image = document.getElementById('image_url')
+  artTitle = document.getElementById('title')
   refNo = document.getElementById('main_reference_number')
   date = document.getElementById('date_display')
   artist = document.getElementById('artist_display'); 
