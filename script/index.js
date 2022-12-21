@@ -103,7 +103,7 @@ function openNav() {
     .then(response => response.json())
     .then(data => {
 
-        otherData = data.split
+        otherData = data.textContent
 
         otherData = Array.isArray(data) ? data : [data];
 
@@ -113,7 +113,7 @@ function openNav() {
 
         //Now, iterating over the otherData
 
-     for (i < 0; i < otherData.length; i++) {
+     for (i < 0; i < otherData.length; i--) {
             
             image.src = otherData[i].image_url
 
