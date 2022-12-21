@@ -2,11 +2,14 @@
 document.addEventListener('DOMContentLoaded', ()=>{
   //selectWorks()
   
+  //fetching data from the server
+
   fetch('https://api.npoint.io/fb6348ea0f63624394bb/data/')
   .then(response=>(response.json()))
   .then(data=> {
     console.log(data)
    
+    //using src and textContent to display data in the browser
     image.src = data[0].image_url 
     artTitle.textContent = data[0].title
    
@@ -15,13 +18,11 @@ document.addEventListener('DOMContentLoaded', ()=>{
     artist.textContent = `Artist :  ${data[0].artist_display}`
      
 
-
 })
 
 
-
-
   })
+
 
 selectWorks = () =>{
   //dropDwn = document.getElementById("dropbtn")
@@ -43,7 +44,7 @@ selectWorks();
 
 
 
-  // side bar navigation menu displayer
+  // creating function openNav() to open the side bar navigation menu and closeNav() to close the menu
 openNav.addEventListener("click", 
 function openNav() {
     document.getElementById("mainNav").style.width = "350px";
@@ -61,9 +62,7 @@ function openNav() {
 
 
 
-  
-
-
+  // create a function appendArtworks to display the list of available paintings on the side bar navigation plane 
 
   function appendArtworks() {
 
@@ -88,10 +87,7 @@ function openNav() {
 
 
 
-/////////////
-
-
-//////
+// creating a function displayArtwork() containing a click event for selecting the artworks on the sidebar navigation pane of the webpage 
  
 
 
@@ -114,6 +110,8 @@ function openNav() {
         //otherData.length = data.length;
   
         //let i = Array.prototype.indexOf(otherData, 0)
+
+        //Now, iterating over the otherData
 
      for (i < 0; i < otherData.length; i++) {
             
