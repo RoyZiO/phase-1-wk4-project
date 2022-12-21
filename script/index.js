@@ -94,7 +94,7 @@ function openNav() {
 
 
  function displayArtwork() {
-    //let data3 = document.querySelectorAll('a.list-group-item');
+    //let otherData = document.querySelectorAll('a.list-group-item');
 
     work.forEach(work => {
         work.addEventListener('click', (e) => {
@@ -104,9 +104,9 @@ function openNav() {
     .then(response => response.json())
     .then(data => {
 
-       
-        
-        let otherData = Array.isArray(data) ? data : [data];
+            otherData = data.split
+
+         otherData = Array.isArray(data) ? data : [data];
 
         
         //otherData = Array.prototype.indexOf.call(work, work)
@@ -124,17 +124,16 @@ function openNav() {
      
              artist.textContent = `Artist :  ${otherData[i].artist_display}`
 
+             
+
      } return otherData[i]
      
+        })
+
+})
     })
 
-})
 
-})
+}
 
-    
- }
  displayArtwork();
-
-
-    
