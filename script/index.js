@@ -101,20 +101,19 @@ function openNav() {
     work.forEach(work => {
         work.addEventListener('click', (e) => {
             e.preventDefault();
+            //console.log(e);
 
     fetch('https://api.npoint.io/fb6348ea0f63624394bb/data/')
     .then(response => response.json())
     .then(data => {
 
-            otherData = data.split
+        otherData = data.split
 
-         otherData = Array.isArray(data) ? data : [data];
+        otherData = Array.isArray(data) ? data : [data];
+  
+        //let i = Array.prototype.indexOf(otherData, 0)
 
-        
-        //otherData = Array.prototype.indexOf.call(work, work)
-
-     for (i = 0; i < otherData.length; i++) {
-
+     for (i of otherData) {
             
             image.src = otherData[i].image_url
 
@@ -124,9 +123,7 @@ function openNav() {
      
             date.textContent = `Date of Display :   ${otherData[i].date_display}`
      
-            artist.textContent = `Artist :  ${otherData[i].artist_display}`
-
-             
+            artist.textContent = `Artist :  ${otherData[i].artist_display}`    
 
      } return otherData[i]
      
@@ -134,7 +131,6 @@ function openNav() {
 
 })
     })
-
 
 }
 
