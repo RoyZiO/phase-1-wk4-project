@@ -88,11 +88,14 @@ function openNav() {
 //Creating functions to open and suspend the sidebar on the right
 
 /////////////
+
+
+//////
  
 
 
  function displayArtwork() {
-    let data3 = document.querySelectorAll('.artworks');
+    //let data3 = document.querySelectorAll('a.list-group-item');
 
     work.forEach(work => {
         work.addEventListener('click', (e) => {
@@ -100,28 +103,28 @@ function openNav() {
 
     fetch('https://api.npoint.io/fb6348ea0f63624394bb/data/')
     .then(response => response.json())
-    .then(work => {
+    .then(data => {
 
         
-        data3.textContent = work[i]
-
-     let i = Array.prototype.indexOf.call(work.Array, work[i])
-
-     for (i = 0; i < data3.length; i++) {
-
+        let otherData = Array.isArray(data) ? data : [data];
         
+
+     //let i = Array.prototype.indexOf.call(work.parentNode.children, work)
+
+     for (i = 0; i < otherData.length; i++) {
+
             
-            image.src = data3[i].image_url 
+            image.src = otherData[i].image_url 
 
-             artTitle.textContent = data3[i].title
+             artTitle.textContent = otherData[i].title
      
-             refNo.textContent = `MAIN REF. NO :   ${data3[i].main_reference_number}`
+             refNo.textContent = `MAIN REF. NO :   ${otherData[i].main_reference_number}`
      
-             date.textContent = `Date of Display :   ${data3[i].date_display}`
+             date.textContent = `Date of Display :   ${otherData[i].date_display}`
      
-             artist.textContent = `Artist :  ${data3[i].artist_display}`
+             artist.textContent = `Artist :  ${otherData[i].artist_display}`
 
-     } return data3[i]
+     } return otherData[i]
      
     })
 
@@ -132,4 +135,6 @@ function openNav() {
     
  }
  displayArtwork();
+
+
     
