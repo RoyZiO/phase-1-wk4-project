@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
     date.textContent = `Date of Display :   ${data[0].date_display}`
     artist.textContent = `Artist :  ${data[0].artist_display}`
      
+
+
 })
 
 
@@ -114,15 +116,15 @@ function openNav() {
      for (i = 0; i < otherData.length; i++) {
 
             
-            image.src = otherData[i].image_url 
+            image.src = otherData[i].image_url
 
-             artTitle.textContent = otherData[i].title
+            artTitle.textContent = otherData[i].title
      
-             refNo.textContent = `MAIN REF. NO :   ${otherData[i].main_reference_number}`
+            refNo.textContent = `MAIN REF. NO :   ${otherData[i].main_reference_number}`
      
-             date.textContent = `Date of Display :   ${otherData[i].date_display}`
+            date.textContent = `Date of Display :   ${otherData[i].date_display}`
      
-             artist.textContent = `Artist :  ${otherData[i].artist_display}`
+            artist.textContent = `Artist :  ${otherData[i].artist_display}`
 
              
 

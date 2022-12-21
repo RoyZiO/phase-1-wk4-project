@@ -35,8 +35,7 @@ These are the objectives for the web application:
 
 1. As a user I should be able to see artworks and their details, including the artist's name and the date the piece was displayed, 
 2. As a user, I should be able to scroll down a side-bar and view the artwork of my choice. 
-3. As a user, I should be able to remove any artwork from my the page to remain with preferred pieces.
-4. As a user, I should be able to add an artwork to my favorites. 
+3. As a user, I should be able to add an artwork to my favorites. 
 
 
 # License
