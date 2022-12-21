@@ -94,16 +94,22 @@ function openNav() {
  function displayArtwork() {
     let data3 = document.querySelectorAll('.artworks');
 
-    fetch('https://api.npoint.io/fb6348ea0f63624394bb/data/')
-    .then(response => response.json())
-    .then(items => {
-        data3 = items.data;
-    })
-
     work.forEach(work => {
         work.addEventListener('click', (e) => {
             e.preventDefault();
-     let i = Array.prototype.find(appendArtworks, data)
+
+    fetch('https://api.npoint.io/fb6348ea0f63624394bb/data/')
+    .then(response => response.json())
+    .then(work => {
+
+        
+        data3.textContent = work[i]
+
+     let i = Array.prototype.indexOf.call(work.Array, work[i])
+
+     for (i = 0; i < data3.length; i++) {
+
+        
             
             image.src = data3[i].image_url 
 
@@ -114,10 +120,16 @@ function openNav() {
              date.textContent = `Date of Display :   ${data3[i].date_display}`
      
              artist.textContent = `Artist :  ${data3[i].artist_display}`
+
+     } return data3[i]
      
     })
 
 })
+
+})
+
+    
  }
  displayArtwork();
     
