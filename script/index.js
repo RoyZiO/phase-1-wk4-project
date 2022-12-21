@@ -1,6 +1,6 @@
 //CODE GOES HERE
 document.addEventListener('DOMContentLoaded', ()=>{
-  selectWorks()
+  //selectWorks()
   
   fetch('https://api.npoint.io/fb6348ea0f63624394bb/data/')
   .then(response=>(response.json()))
@@ -110,10 +110,12 @@ function openNav() {
         otherData = data.split
 
         otherData = Array.isArray(data) ? data : [data];
+
+        //otherData.length = data.length;
   
         //let i = Array.prototype.indexOf(otherData, 0)
 
-     for (i of otherData) {
+     for (i < 0; i < otherData.length; i++) {
             
             image.src = otherData[i].image_url
 
