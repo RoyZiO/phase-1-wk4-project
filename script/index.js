@@ -86,25 +86,38 @@ function openNav() {
   appendArtworks();    
 
 //Creating functions to open and suspend the sidebar on the right
+
+/////////////
  
 
-function clickArtwork() {
 
-const moreArtwork = document.querySelectorAll('a.list-group-item');
-work.forEach (work => {
-  work.addEventListener('click', (e) => {
-    e.preventDefault()
+ function displayArtwork() {
+    let data3 = document.querySelectorAll('.artworks');
+
     fetch('https://api.npoint.io/fb6348ea0f63624394bb/data/')
-    .then(response => (response.json()))
-      .then(pieces=> {
-        moreData = pieces.data
-        let i = Array.prototype.indexOf.call(work.parentNode.children, work);
-        image.src = moreData[i].image_url 
-        artTitle.textContent = moreData[i].title
-        refNo.textContent = `MAIN REF. NO :   ${moreData[i].main_reference_number}`
-        date.textContent = `Date of Display :   ${moreData[i].date_display}`
-        artist.textContent = `Artist :  ${moreData[i].artist_display}`
+    .then(response => response.json())
+    .then(items => {
+        data3 = items.data;
+    })
 
-      })})})
-    }
-    clickArtwork();
+    work.forEach(work => {
+        work.addEventListener('click', (e) => {
+            e.preventDefault();
+     let i = Array.prototype.find(appendArtworks, data)
+            
+            image.src = data3[i].image_url 
+
+             artTitle.textContent = data3[i].title
+     
+             refNo.textContent = `MAIN REF. NO :   ${data3[i].main_reference_number}`
+     
+             date.textContent = `Date of Display :   ${data3[i].date_display}`
+     
+             artist.textContent = `Artist :  ${data3[i].artist_display}`
+     
+    })
+
+})
+ }
+ displayArtwork();
+    
