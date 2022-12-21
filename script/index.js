@@ -9,12 +9,11 @@ document.addEventListener('DOMContentLoaded', ()=>{
    
     image.src = data[0].image_url 
     artTitle.textContent = data[0].title
-   // description.textContent = data[0].description
+   
     refNo.textContent = `MAIN REF. NO :   ${data[0].main_reference_number}`
     date.textContent = `Date of Display :   ${data[0].date_display}`
     artist.textContent = `Artist :  ${data[0].artist_display}`
-    //remainder = (data[0].capacity)-(data[0].tickets_sold)
-    //footer.textContent = `${remainder}`  
+     
 })
 
 
@@ -46,14 +45,14 @@ selectWorks();
 openNav.addEventListener("click", 
 function openNav() {
     document.getElementById("mainNav").style.width = "350px";
-    //document.querySelector('div.container-fluid text bg-dark').style.marginRight = "350px";
+    
     document.querySelector('div.main-container').style.marginRight = "350px";
-    // print( document.getElementById("mySidenav"))
+
   });
   document.getElementById("closeNav").addEventListener("click", 
   function closeNav() {
     document.getElementById("mainNav").style.width = "0";
-    //document.querySelector('div.container-fluid text bg-dark').style.marginLeft = "0";
+  
     document.querySelector('div.main-container').style.marginLeft = "0";
   });
 
@@ -85,7 +84,7 @@ function openNav() {
       }
   appendArtworks();    
 
-//Creating functions to open and suspend the sidebar on the right
+
 
 /////////////
 
@@ -105,11 +104,12 @@ function openNav() {
     .then(response => response.json())
     .then(data => {
 
+       
         
         let otherData = Array.isArray(data) ? data : [data];
-        
 
-     //let i = Array.prototype.indexOf.call(work.parentNode.children, work)
+        
+        //otherData = Array.prototype.indexOf.call(work, work)
 
      for (i = 0; i < otherData.length; i++) {
 
