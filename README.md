@@ -15,6 +15,7 @@ Project for SD Phase 1
 1. Text editor such as VsCode editor is required
 2. We will use json-server to access data from an API server
 3. Knowledge of HTML, CSS and JavaScript.
+4. Basic knowledge of Vercel and npoint.
 
 
 ## Installations
